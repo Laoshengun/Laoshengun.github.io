@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>firstblog</title>
+      <link href="/2019/12/17/firstblog/"/>
+      <url>/2019/12/17/firstblog/</url>
+      
+        <content type="html"><![CDATA[<h2 id="第一篇blog"><a href="#第一篇blog" class="headerlink" title="第一篇blog"></a>第一篇blog</h2><h4 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h4><p>写一些每天的所思所想，万一哪天我死了，无论是自然死亡还是非自然死亡，这就是我曾经存在于在这个世界上的证据，把自己的每天的开心与不开心写下来，也算是贯彻吾日三省吾身吧，可能会改变一些事情</p><p>偶尔写一些技术文章， 方便自己查阅，如果可能的话，也提供给需要的人</p><p>嗯，暂时就这样吧</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔日志 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+            <tag> 夏季八写 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2019/12/17/hello-world/"/>
       <url>/2019/12/17/hello-world/</url>
