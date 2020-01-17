@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="20191225, Laoshengun">
-    <meta name="description" content="Don&#39;t Quit">
+    <meta name="keywords" content="01.两数之和, Laoshengun">
+    <meta name="description" content="01.两数之和题目给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
+示例:
+给定  ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>20191225 | Laoshengun</title>
+    <title>01.两数之和 | Laoshengun</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">20191225</h1>
+                    <h1 class="description center-align post-title">01.两数之和</h1>
                 </div>
             </div>
         </div>
@@ -425,8 +428,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                <span class="chip bg-color">随笔</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
                             </a>
                         
                     </div>
@@ -437,8 +440,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%9A%8F%E7%AC%94%E6%97%A5%E5%BF%97/" class="post-category">
-                                随笔日志
+                            <a href="/categories/LeetCode/" class="post-category">
+                                LeetCode
                             </a>
                         
                     </div>
@@ -450,21 +453,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-12-25
+                    2020-01-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-25
+                    2020-01-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2
+                    417
                 </div>
                 
 
@@ -487,7 +490,55 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2>
+                <h1 id="01-两数之和"><a href="#01-两数之和" class="headerlink" title="01.两数之和"></a>01.两数之和</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p>
+<p>示例:</p>
+<p>给定  nums = [2, 7, 11, 15], target = 9</p>
+<p>因为  nums[0] + nums[1] = 2 + 7 = 9<br>所以 返回 [0, 1]</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/two-sum" target="_blank" rel="noopener">https://leetcode-cn.com/problems/two-sum</a></p>
+<h2 id="第一次提交（37ms）"><a href="#第一次提交（37ms）" class="headerlink" title="第一次提交（37ms）"></a>第一次提交（37ms）</h2><p>利用双重循环，两两相加与目标值相比较（憨憨做法）</p>
+<pre><code>class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int i, j;
+        int[] result = new int[2]; 
+        for(i = 0; i &lt; nums.length; i++){
+            for(j = 1 + i; j &lt; nums.length; j++){
+                if(nums[i] + nums[j] == target){
+                    result[0] = i;
+                    result[1] = j;
+
+                }
+            }
+        }
+        return result;
+    }
+}</code></pre><h2 id="第二次提交（3ms）"><a href="#第二次提交（3ms）" class="headerlink" title="第二次提交（3ms）"></a>第二次提交（3ms）</h2><p>参考了评论的答案</p>
+<p>利用哈希表，原理如下</p>
+<p>假设 target = a+b，即 b = target - a</p>
+<p>循环数组，判断数 a 是否存在于哈希表</p>
+<p>如果不存在，将 a 需要的数 b 和 a 的下标作为键值对存放于哈希表中 &lt;b, a的下标&gt;</p>
+<p>如果存在，则此时的 a 等于先前存放于哈希表中的 b ，即 a’ = b，那么只需要根据 a’ 取出 a 的下标</p>
+<p>返回一维数组 [a的下标, a’的下标] </p>
+<p>(大佬牛逼)</p>
+<pre><code>import java.util.HashMap;
+import java.util.Map;
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] result = new int[2];
+        //建立哈希表
+        HashMap&lt;Integer, Integer&gt; hash = new HashMap&lt;Integer, Integer&gt;();
+        for(int i = 0; i &lt; nums.length; i++){
+            if(hash.containsKey(nums[i])){
+                result[0] = hash.get(nums[i]);
+                result[1] = i;
+                return result;
+            }
+            hash.put(target-nums[i], i);
+        }
+        return result;
+    }
+}</code></pre>
             </div>
             <hr/>
 
@@ -512,7 +563,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://laoshengun.github.io/2019/12/25/20191225/">https://laoshengun.github.io/2019/12/25/20191225/</a>
+                    <a href="https://laoshengun.github.io/2020/01/17/leetcode1/">https://laoshengun.github.io/2020/01/17/leetcode1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -550,8 +601,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                    <span class="chip bg-color">随笔</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
                                 </a>
                             
                         </div>
@@ -717,29 +768,83 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/07/20200107/">
+                <a href="/2020/01/17/leetcode1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="解决“There is no locally stored library”的方法">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="01.两数之和">
                         
-                        <span class="card-title">解决“There is no locally stored library”的方法</span>
+                        <span class="card-title">01.两数之和</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            导入js时读取失败
+                            01.两数之和题目给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
+示例:
+给定  
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-07
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/LeetCode/" class="post-category">
+                                    LeetCode
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/01/10/20200110/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Bootstrap模态框登录窗口">
+                        
+                        <span class="card-title">Bootstrap模态框登录窗口</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            用bootstrap实现模态框登录窗口
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -755,57 +860,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/">
-                        <span class="chip bg-color">错误解决</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/12/18/20191218/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="关于坚持这件事">
-                        
-                        <span class="card-title">关于坚持这件事</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            关于坚持这件事有一些想说的，码出来给自己看
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-18
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E9%9A%8F%E7%AC%94%E6%97%A5%E5%BF%97/" class="post-category">
-                                    随笔日志
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/bootstrap/">
+                        <span class="chip bg-color">bootstrap</span>
                     </a>
                     
                 </div>

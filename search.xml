@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>01.两数之和</title>
+      <link href="/2020/01/17/leetcode1/"/>
+      <url>/2020/01/17/leetcode1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="01-两数之和"><a href="#01-两数之和" class="headerlink" title="01.两数之和"></a>01.两数之和</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p><p>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p><p>示例:</p><p>给定  nums = [2, 7, 11, 15], target = 9</p><p>因为  nums[0] + nums[1] = 2 + 7 = 9<br>所以 返回 [0, 1]</p><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/two-sum" target="_blank" rel="noopener">https://leetcode-cn.com/problems/two-sum</a></p><h2 id="第一次提交（37ms）"><a href="#第一次提交（37ms）" class="headerlink" title="第一次提交（37ms）"></a>第一次提交（37ms）</h2><p>利用双重循环，两两相加与目标值相比较（憨憨做法）</p><pre><code>class Solution {    public int[] twoSum(int[] nums, int target) {        int i, j;        int[] result = new int[2];         for(i = 0; i &lt; nums.length; i++){            for(j = 1 + i; j &lt; nums.length; j++){                if(nums[i] + nums[j] == target){                    result[0] = i;                    result[1] = j;                }            }        }        return result;    }}</code></pre><h2 id="第二次提交（3ms）"><a href="#第二次提交（3ms）" class="headerlink" title="第二次提交（3ms）"></a>第二次提交（3ms）</h2><p>参考了评论的答案</p><p>利用哈希表，原理如下</p><p>假设 target = a+b，即 b = target - a</p><p>循环数组，判断数 a 是否存在于哈希表</p><p>如果不存在，将 a 需要的数 b 和 a 的下标作为键值对存放于哈希表中 &lt;b, a的下标&gt;</p><p>如果存在，则此时的 a 等于先前存放于哈希表中的 b ，即 a’ = b，那么只需要根据 a’ 取出 a 的下标</p><p>返回一维数组 [a的下标, a’的下标] </p><p>(大佬牛逼)</p><pre><code>import java.util.HashMap;import java.util.Map;class Solution {    public int[] twoSum(int[] nums, int target) {        int[] result = new int[2];        //建立哈希表        HashMap&lt;Integer, Integer&gt; hash = new HashMap&lt;Integer, Integer&gt;();        for(int i = 0; i &lt; nums.length; i++){            if(hash.containsKey(nums[i])){                result[0] = hash.get(nums[i]);                result[1] = i;                return result;            }            hash.put(target-nums[i], i);        }        return result;    }}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Bootstrap模态框登录窗口</title>
       <link href="/2020/01/10/20200110/"/>
       <url>/2020/01/10/20200110/</url>
