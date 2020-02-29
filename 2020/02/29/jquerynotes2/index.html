@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="解决“There is no locally stored library”的方法, 噗噗熊">
-    <meta name="description" content="导入js时读取失败">
+    <meta name="keywords" content="jQuery笔记02, 噗噗熊">
+    <meta name="description" content="操作HTML元素的属性和内容">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>解决“There is no locally stored library”的方法 | 噗噗熊</title>
+    <title>jQuery笔记02 | 噗噗熊</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +303,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">解决“There is no locally stored library”的方法</h1>
+                    <h1 class="description center-align post-title">jQuery笔记02</h1>
                 </div>
             </div>
         </div>
@@ -425,8 +425,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/">
-                                <span class="chip bg-color">错误解决</span>
+                            <a href="/tags/jQuery/">
+                                <span class="chip bg-color">jQuery</span>
                             </a>
                         
                     </div>
@@ -437,8 +437,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
                             </a>
                         
                     </div>
@@ -450,28 +450,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-07
+                    2020-02-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-07
+                    2020-02-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    98
+                    469
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -487,8 +487,80 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="解决“There-is-no-locally-stored-library”的方法"><a href="#解决“There-is-no-locally-stored-library”的方法" class="headerlink" title="解决“There is no locally stored library”的方法"></a>解决“There is no locally stored library”的方法</h1><pre><code>&lt;script src=&quot;https://cdn.bootcss.com/jquery/2.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre><p>用WebStorm进行前端开发时，导入此代码时发生错误，无法读取文件，报错“There is no locally stored library”</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>当鼠标停留在报错语句上时，按Alt + Enter，会出现解决方法，下载library到本地即可</p>
+                <h1 id="jQuery笔记02"><a href="#jQuery笔记02" class="headerlink" title="jQuery笔记02"></a>jQuery笔记02</h1><ol>
+<li>attr() </li>
+<li>removeaAttr() </li>
+<li>html() ，text()</li>
+<li>val() </li>
+<li>append()，prepend()，after()，before()</li>
+</ol>
+<h3 id="1-获取，设置属性值"><a href="#1-获取，设置属性值" class="headerlink" title="1.获取，设置属性值"></a>1.获取，设置属性值</h3><p>attr()方法用于获取属性的值</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> val <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"href"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 获取&lt;a>标签的href属性</span></code></pre>
+<p>attr()方法还可以通过第二个参数给属性设置一个值</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+   <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"href"</span><span class="token punctuation">,</span> <span class="token string">"https://www.jquery.com"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 获取&lt;a>标签的href属性，并通过第二个参数赋值</span></code></pre>
+<h3 id="2-删除属性"><a href="#2-删除属性" class="headerlink" title="2.删除属性"></a>2.删除属性</h3><p>removeAttr() 方法从HTML元素中删除属性</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"table"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeAttr</span><span class="token punctuation">(</span><span class="token string">"border"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 删除&lt;table>标签的border属性</span></code></pre>
+<h3 id="3-获取，设置HTML内容"><a href="#3-获取，设置HTML内容" class="headerlink" title="3.获取，设置HTML内容"></a>3.获取，设置HTML内容</h3><p>html() 方法可以获取并设置所选html元素的内容，包括HTML标记</p>
+<p>例如:</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+    jQuery is <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>fun<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> val <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 获取&lt;p>标签里的内容包括标签，弹出 "jQuery is &lt;b>fun&lt;/b>"</span>
+
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hmtl</span><span class="token punctuation">(</span><span class="token string">"hello &lt;b>world!&lt;/b>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//将元素的内容设置为 "hello &lt;b>world!&lt;/b>"，可设置标签</span></code></pre>
+<p>text() 方法可以获取并设置HTML元素的文本内容，不包括HTML标记</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> val <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 弹出 "jQuery is fun"</span>
+
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token string">"hello world!"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//将元素的文本内容设置为 "hello world!"，不可设置标签</span></code></pre>
+<h3 id="4-val-方法"><a href="#4-val-方法" class="headerlink" title="4.val() 方法"></a>4.val() 方法</h3><p>val() 方法可以获取和设置表单字段的值</p>
+<p>例如：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Tom<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#name"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 获取id为name的表单的值，弹出 "Tom"</span>
+
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#name"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token string">"Jerry"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 将id为name的表单的值，设置为 "Jerry"</span></code></pre>
+<h3 id="5-添加内容"><a href="#5-添加内容" class="headerlink" title="5.添加内容"></a>5.添加内容</h3><p>以下方法在添加新内容的同时不会删除现有内容</p>
+<ul>
+<li>append() 方法再所选元素的末尾插入内容</li>
+<li>prepend() 方法在所选元素的开头插入内容</li>
+<li>after() 方法在所选元素之前插入内容（可以添加HTML标签）</li>
+<li>before() 方法在所选元素之后插入内容（可以添加HTML标签）</li>
+</ul>
+<p>例如：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>before()<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+    prepend()
+    a
+    append()
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>after()<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span></code></pre>
 
             </div>
             <hr/>
@@ -504,7 +576,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://laoshengun.github.io" rel="external nofollow noreferrer">Laoshengun</a>
+                    <a href="https://laoshengun.github.io" rel="external nofollow noreferrer">laoshengun</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -514,7 +586,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://laoshengun.github.io/2020/01/07/20200107/">https://laoshengun.github.io/2020/01/07/20200107/</a>
+                    <a href="https://laoshengun.github.io/2020/02/29/jquerynotes2/">https://laoshengun.github.io/2020/02/29/jquerynotes2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -527,7 +599,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://laoshengun.github.io" target="_blank">Laoshengun</a>
+                    <a href="https://laoshengun.github.io" target="_blank">laoshengun</a>
                     !
                 </span>
             </div>
@@ -552,8 +624,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/">
-                                    <span class="chip bg-color">错误解决</span>
+                                <a href="/tags/jQuery/">
+                                    <span class="chip bg-color">jQuery</span>
                                 </a>
                             
                         </div>
@@ -724,7 +796,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2020-01-07T22-52-35',
+        id: '2020-02-29T13-50-37',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -745,46 +817,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/10/20200110/">
+                <a href="/2020/02/29/jquerynotes2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Bootstrap模态框登录窗口">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="jQuery笔记02">
                         
-                        <span class="card-title">Bootstrap模态框登录窗口</span>
+                        <span class="card-title">jQuery笔记02</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            用bootstrap实现模态框登录窗口
+                            操作HTML元素的属性和内容
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/bootstrap/">
-                        <span class="chip bg-color">bootstrap</span>
+                    <a href="/tags/jQuery/">
+                        <span class="chip bg-color">jQuery</span>
                     </a>
                     
                 </div>
@@ -798,31 +872,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/25/20191225/">
+                <a href="/2020/02/28/jquerynotes1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="20191225">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="jQuery笔记01">
                         
-                        <span class="card-title">20191225</span>
+                        <span class="card-title">jQuery笔记01</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Don't Quit
+                            什么是jQuery
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9A%8F%E7%AC%94%E6%97%A5%E5%BF%97/" class="post-category">
-                                    随笔日志
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
@@ -832,8 +906,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/jQuery/">
+                        <span class="chip bg-color">jQuery</span>
                     </a>
                     
                 </div>
