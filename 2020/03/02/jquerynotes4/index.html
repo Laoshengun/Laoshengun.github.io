@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="jQuery笔记03, 噗噗熊">
-    <meta name="description" content="对CSS的操作">
+    <meta name="keywords" content="jQuery笔记04, 噗噗熊">
+    <meta name="description" content="对DOM的操作，元素的遍历和删除">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>jQuery笔记03 | 噗噗熊</title>
+    <title>jQuery笔记04 | 噗噗熊</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +303,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">jQuery笔记03</h1>
+                    <h1 class="description center-align post-title">jQuery笔记04</h1>
                 </div>
             </div>
         </div>
@@ -450,21 +450,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-01
+                    2020-03-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-01
+                    2020-03-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    365
+                    335
                 </div>
                 
 
@@ -487,55 +487,36 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="jQuery笔记03"><a href="#jQuery笔记03" class="headerlink" title="jQuery笔记03"></a>jQuery笔记03</h1><ol>
-<li>addClass(), removeClass(), toggleClass()</li>
-<li>css()</li>
-<li>width(), height(), innerWidth(), innerHeight(), outerWidth(), outerHeight()</li>
-</ol>
-<h3 id="1-添加，删除class"><a href="#1-添加，删除class" class="headerlink" title="1.添加，删除class"></a>1.添加，删除class</h3><p>addClass() 方法可以为选定的HTML元素添加一个或多个类</p>
+                <h1 id="jQuery笔记04"><a href="#jQuery笔记04" class="headerlink" title="jQuery笔记04"></a>jQuery笔记04</h1><h3 id="1-DOM遍历"><a href="#1-DOM遍历" class="headerlink" title="1.DOM遍历"></a>1.DOM遍历</h3><p>parent() 方法可以返回所选HTML元素的直接父元素</p>
 <p>例如：</p>
 <pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
-    i love jquery
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>段落<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.header</span></span><span class="token punctuation">{</span>
-    <span class="token property">color</span><span class="token punctuation">:</span>blue<span class="token punctuation">;</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span>x-large<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">"header"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 为HTML的div元素添加了一个 class "header"</span></code></pre>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><p>removeClass()方法可以从所选HTML元素中删除一个或多个类名</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token string">"red"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 从div元素中删除了 class "red"</span></code></pre>
-<h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3><p>toggleClass() 方法可以让所选HTML元素添加或者删除类，如果存在类则删除，如果不存在则添加</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> e <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+e<span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"border"</span><span class="token punctuation">,</span> <span class="token string">"2px solid red"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 选择了p元素的父元素div，并设置了一个红边框</span></code></pre>
+<ul>
+<li>parents() 方法可以返回所选元素的所有父元素</li>
+<li>children() 方法可以返回所选元素的所有子元素</li>
+<li>siblings() 方法可以返回所选元素的所有兄弟(同级)元素</li>
+<li>next() 方法可以返回所选元素的下一个兄弟元素</li>
+<li>nextAll() 方法可以返回所选元素下面的所有兄弟元素</li>
+<li>prev() 方法可以返回所选元素的上一个兄弟元素</li>
+<li>prevAll() 方法可以返回所选元素上面的所有兄弟元素</li>
+<li>eq() 方法可以返回具有特定索引号的元素(多个同样的元素，索引号从0开始)</li>
+</ul>
+<h3 id="2-删除元素"><a href="#2-删除元素" class="headerlink" title="2.删除元素"></a>2.删除元素</h3><p>remove() 方法可以从DOM中删除选定的HTML元素</p>
 <p>例如：</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>i love jquery<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>click<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span></code></pre>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.red</span></span><span class="token punctuation">{</span>
-    <span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span>
-    <span class="token property">font-weight</span><span class="token punctuation">:</span>bold<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toggleClass</span><span class="token punctuation">(</span><span class="token string">"red"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 点击button将会为p元素添加class "red"，再点击一遍将会删除class "red"</span></code></pre>
-<h3 id="2-CSS属性"><a href="#2-CSS属性" class="headerlink" title="2.CSS属性"></a>2.CSS属性</h3><p>css() 方法可以获取和设置css的属性值，同html() 方法类似</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"background-color"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// 获取 &lt;p> 标签 background-color 属性值</span>
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"background-color"</span><span class="token punctuation">,</span> <span class="token string">"blue"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// 将 background-color 属性值设置为 blue</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>也可以用 “属性”: “值”对 来设置多个属性</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"color"</span><span class="token punctuation">:</span><span class="token string">"red"</span><span class="token punctuation">,</span> <span class="token string">"font-size"</span><span class="token punctuation">:</span><span class="token string">"200%"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">// 同时设置了 color 和 font-size 两个属性</span></code></pre>
-<h3 id="3-设置样式"><a href="#3-设置样式" class="headerlink" title="3.设置样式"></a>3.设置样式</h3><p>可以使用width() 和height() 方法来获取和设置HTML元素的宽度和高度</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">width</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">height</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 将div的宽度和高度设置为100px</span></code></pre>
-<p>innerWidth() 和 innerHeight() 方法可以获取包括填充部分的尺寸</p>
-<p>outerWidth() 和 outerHeight() 方法可以获取和设置包括填充和边框部分的尺寸</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">color</span><span class="token punctuation">:</span>red</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Red<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">color</span><span class="token punctuation">:</span>green</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Green<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">color</span><span class="token punctuation">:</span>blue</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Blue<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">eq</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 删除索引号为1的P元素，即删除Green，第二个段落元素</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 删除所有p元素</span></code></pre>
+<p>empty() 方法可以删除所选元素的子元素</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 删除div元素的所有子元素</span></code></pre>
 
             </div>
             <hr/>
@@ -561,7 +542,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://laoshengun.github.io/2020/03/01/jquerynotes3/">https://laoshengun.github.io/2020/03/01/jquerynotes3/</a>
+                    <a href="https://laoshengun.github.io/2020/03/02/jquerynotes4/">https://laoshengun.github.io/2020/03/02/jquerynotes4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -771,7 +752,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2020-03-01T11-33-31',
+        id: '2020-03-02T09-50-46',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -792,9 +773,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/03/02/jquerynotes4/">
                     <div class="card-image">
@@ -812,9 +794,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -827,6 +809,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -845,24 +828,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/29/jquerynotes2/">
+                <a href="/2020/03/01/jquerynotes3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="jQuery笔记02">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="jQuery笔记03">
                         
-                        <span class="card-title">jQuery笔记02</span>
+                        <span class="card-title">jQuery笔记03</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            操作HTML元素的属性和内容
+                            对CSS的操作
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
                             </span>
                         <span class="publish-author">
                             
