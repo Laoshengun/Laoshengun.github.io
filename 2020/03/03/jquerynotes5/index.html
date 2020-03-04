@@ -457,14 +457,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-03
+                    2020-03-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    607
+                    605
                 </div>
                 
 
@@ -487,29 +487,29 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="jQuery笔记05"><a href="#jQuery笔记05" class="headerlink" title="jQuery笔记05"></a>jQuery笔记05</h1><h3 id="1-事件处理"><a href="#1-事件处理" class="headerlink" title="1.事件处理"></a>1.事件处理</h3><p>当所选元素发生事件时，jQuery可以执行处理函数</p>
+                <h2 id="1-事件处理"><a href="#1-事件处理" class="headerlink" title="1.事件处理"></a>1.事件处理</h2><p>当所选元素发生事件时，jQuery可以执行处理函数</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#demo"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"body"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token function">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// 当id="demo"的元素上发生点击事件时，显示当前日期</span></code></pre>
-<h4 id="鼠标事件："><a href="#鼠标事件：" class="headerlink" title="鼠标事件："></a>鼠标事件：</h4><ul>
+<h3 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h3><ul>
 <li><strong>click</strong>: 单击时发生</li>
 <li><strong>dbclick</strong>: 双击元素时触发</li>
 <li><strong>mouseenter</strong>: 当鼠标指针进入所愿元素时触发</li>
 <li><strong>mouseleave</strong>: 当鼠标指针离开所选元素时触发</li>
 <li><strong>mouseover</strong>: 当鼠标指针在所选元素上方悬停时触发</li>
 </ul>
-<h4 id="键盘事件："><a href="#键盘事件：" class="headerlink" title="键盘事件："></a>键盘事件：</h4><ul>
+<h3 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h3><ul>
 <li><strong>keydown</strong>: 当按下键盘按键时会触发</li>
 <li><strong>keyup</strong>: 当键盘按键被释放时会触发</li>
 </ul>
-<h4 id="表单事件："><a href="#表单事件：" class="headerlink" title="表单事件："></a>表单事件：</h4><ul>
+<h3 id="表单事件"><a href="#表单事件" class="headerlink" title="表单事件"></a>表单事件</h3><ul>
 <li><strong>submit</strong>: 提交表单时触发</li>
 <li><strong>change</strong>: 当表单元素的值发生改变时触发</li>
 <li><strong>focus</strong>: 当表单元素获得焦点时触发</li>
 <li><strong>blur</strong>: 当表单元素失去焦点时触发</li>
 </ul>
-<h4 id="文件事件："><a href="#文件事件：" class="headerlink" title="文件事件："></a>文件事件：</h4><ul>
+<h3 id="文件事件"><a href="#文件事件" class="headerlink" title="文件事件"></a>文件事件</h3><ul>
 <li><strong>ready</strong>: 当DOM加载完成后触发</li>
 <li><strong>resize</strong>: 当浏览器窗口大小改变时触发</li>
 <li><strong>scroll</strong>: 当用户在指定的元素中滚动滚动条时触发</li>
@@ -526,7 +526,7 @@
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span>click<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// off()方法删除了click事件的事件处理程序</span></code></pre>
-<h3 id="2-事件对象"><a href="#2-事件对象" class="headerlink" title="2.事件对象"></a>2.事件对象</h3><p>每个事件处理函数都可以接收一个事件对象，其中包含与该事件相关的属性和方法</p>
+<h2 id="2-事件对象"><a href="#2-事件对象" class="headerlink" title="2.事件对象"></a>2.事件对象</h2><p>每个事件处理函数都可以接收一个事件对象，其中包含与该事件相关的属性和方法</p>
 <ul>
 <li><strong>pageX</strong>, <strong>pageY</strong> ：事件发生时相对于页面左上角的鼠标位置 (X和Y的坐标)</li>
 <li><strong>type</strong>：键入事件的类型 (例如”点击”)</li>
@@ -804,30 +804,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/03/jquerynotes5/">
+                <a href="/2020/03/04/jquerynotes6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="jQuery笔记05">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="jQuery笔记06">
                         
-                        <span class="card-title">jQuery笔记05</span>
+                        <span class="card-title">jQuery笔记06</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            对于事件的处理
+                            对效果的设置
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-03
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-04
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -840,7 +839,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1044,7 +1042,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4k</span>&nbsp;字
+                class="white-color">4.2k</span>&nbsp;字
             
             
             

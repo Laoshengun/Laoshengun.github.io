@@ -457,14 +457,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-29
+                    2020-03-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    343
+                    340
                 </div>
                 
 
@@ -487,8 +487,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="jQuery-笔记01"><a href="#jQuery-笔记01" class="headerlink" title="jQuery 笔记01"></a>jQuery 笔记01</h1><h3 id="1-jQuery是什么"><a href="#1-jQuery是什么" class="headerlink" title="1.jQuery是什么"></a>1.jQuery是什么</h3><p>一个JavaScript库</p>
-<h3 id="2-jQuery的引入"><a href="#2-jQuery的引入" class="headerlink" title="2.jQuery的引入"></a>2.jQuery的引入</h3><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+                <h2 id="1-jQuery是什么"><a href="#1-jQuery是什么" class="headerlink" title="1.jQuery是什么"></a>1.jQuery是什么</h2><p>一个JavaScript库</p>
+<h2 id="2-jQuery的引入"><a href="#2-jQuery的引入" class="headerlink" title="2.jQuery的引入"></a>2.jQuery的引入</h2><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>页面标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.bootcss.com/jquery/2.2.4/jquery.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
@@ -496,13 +496,13 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
-<h3 id="3-文档就绪事件"><a href="#3-文档就绪事件" class="headerlink" title="3.文档就绪事件"></a>3.文档就绪事件</h3><p>等待HTML文档完全加载并准备就绪</p>
+<h2 id="3-文档就绪事件"><a href="#3-文档就绪事件" class="headerlink" title="3.文档就绪事件"></a>3.文档就绪事件</h2><p>等待HTML文档完全加载并准备就绪</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">//在这写jQuery代码</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-<h3 id="4-jQuery的基本语法"><a href="#4-jQuery的基本语法" class="headerlink" title="4.jQuery的基本语法"></a>4.jQuery的基本语法</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"selector"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h2 id="4-jQuery的基本语法"><a href="#4-jQuery的基本语法" class="headerlink" title="4.jQuery的基本语法"></a>4.jQuery的基本语法</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"selector"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <p>selector是选择器，action是执行的动作</p>
-<h3 id="5-jQuery的常用选择器"><a href="#5-jQuery的常用选择器" class="headerlink" title="5.jQuery的常用选择器"></a>5.jQuery的常用选择器</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//所有&lt;div>元素</span>
+<h2 id="5-jQuery的常用选择器"><a href="#5-jQuery的常用选择器" class="headerlink" title="5.jQuery的常用选择器"></a>5.jQuery的常用选择器</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//所有&lt;div>元素</span>
 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#test"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//id="test"的元素</span>
 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".menu"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//class="menu"的所有元素</span>
 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div.menu"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 所有&lt;div>元素与class="menu"</span>
@@ -1015,7 +1015,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4k</span>&nbsp;字
+                class="white-color">4.2k</span>&nbsp;字
             
             
             

@@ -457,14 +457,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-29
+                    2020-03-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    469
+                    466
                 </div>
                 
 
@@ -487,28 +487,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="jQuery笔记02"><a href="#jQuery笔记02" class="headerlink" title="jQuery笔记02"></a>jQuery笔记02</h1><ol>
+                <ol>
 <li>attr() </li>
 <li>removeaAttr() </li>
 <li>html() ，text()</li>
 <li>val() </li>
 <li>append()，prepend()，after()，before()</li>
 </ol>
-<h3 id="1-获取，设置属性值"><a href="#1-获取，设置属性值" class="headerlink" title="1.获取，设置属性值"></a>1.获取，设置属性值</h3><p>attr()方法用于获取属性的值</p>
+<h2 id="1-获取，设置属性值"><a href="#1-获取，设置属性值" class="headerlink" title="1.获取，设置属性值"></a>1.获取，设置属性值</h2><p><strong>attr()</strong> 方法用于获取属性的值</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">var</span> val <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"href"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">alert</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// 获取&lt;a>标签的href属性</span></code></pre>
-<p>attr()方法还可以通过第二个参数给属性设置一个值</p>
+<p><strong>attr()</strong> 方法还可以通过第二个参数给属性设置一个值</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"href"</span><span class="token punctuation">,</span> <span class="token string">"https://www.jquery.com"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// 获取&lt;a>标签的href属性，并通过第二个参数赋值</span></code></pre>
-<h3 id="2-删除属性"><a href="#2-删除属性" class="headerlink" title="2.删除属性"></a>2.删除属性</h3><p>removeAttr() 方法从HTML元素中删除属性</p>
+<h2 id="2-删除属性"><a href="#2-删除属性" class="headerlink" title="2.删除属性"></a>2.删除属性</h2><p><strong>removeAttr()</strong> 方法从HTML元素中删除属性</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"table"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeAttr</span><span class="token punctuation">(</span><span class="token string">"border"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// 删除&lt;table>标签的border属性</span></code></pre>
-<h3 id="3-获取，设置HTML内容"><a href="#3-获取，设置HTML内容" class="headerlink" title="3.获取，设置HTML内容"></a>3.获取，设置HTML内容</h3><p>html() 方法可以获取并设置所选html元素的内容，包括HTML标记</p>
+<h2 id="3-获取，设置HTML内容"><a href="#3-获取，设置HTML内容" class="headerlink" title="3.获取，设置HTML内容"></a>3.获取，设置HTML内容</h2><p><strong>html()</strong> 方法可以获取并设置所选html元素的内容，包括HTML标记</p>
 <p>例如:</p>
 <pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
     jQuery is <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>fun<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span>
@@ -523,7 +523,7 @@
     <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hmtl</span><span class="token punctuation">(</span><span class="token string">"hello &lt;b>world!&lt;/b>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//将元素的内容设置为 "hello &lt;b>world!&lt;/b>"，可设置标签</span></code></pre>
-<p>text() 方法可以获取并设置HTML元素的文本内容，不包括HTML标记</p>
+<p><strong>text()</strong> 方法可以获取并设置HTML元素的文本内容，不包括HTML标记</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">var</span> val <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">alert</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -534,7 +534,7 @@
     <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token string">"hello world!"</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//将元素的文本内容设置为 "hello world!"，不可设置标签</span></code></pre>
-<h3 id="4-val-方法"><a href="#4-val-方法" class="headerlink" title="4.val() 方法"></a>4.val() 方法</h3><p>val() 方法可以获取和设置表单字段的值</p>
+<h2 id="4-val-方法"><a href="#4-val-方法" class="headerlink" title="4.val() 方法"></a>4.val() 方法</h2><p><strong>val()</strong> 方法可以获取和设置表单字段的值</p>
 <p>例如：</p>
 <pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Tom<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -546,12 +546,12 @@
     <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#name"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token string">"Jerry"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// 将id为name的表单的值，设置为 "Jerry"</span></code></pre>
-<h3 id="5-添加内容"><a href="#5-添加内容" class="headerlink" title="5.添加内容"></a>5.添加内容</h3><p>以下方法在添加新内容的同时不会删除现有内容</p>
+<h2 id="5-添加内容"><a href="#5-添加内容" class="headerlink" title="5.添加内容"></a>5.添加内容</h2><p>以下方法在添加新内容的同时不会删除现有内容</p>
 <ul>
-<li>append() 方法再所选元素的末尾插入内容</li>
-<li>prepend() 方法在所选元素的开头插入内容</li>
-<li>after() 方法在所选元素之前插入内容（可以添加HTML标签）</li>
-<li>before() 方法在所选元素之后插入内容（可以添加HTML标签）</li>
+<li><strong>append()</strong> 方法再所选元素的末尾插入内容</li>
+<li><strong>prepend()</strong> 方法在所选元素的开头插入内容</li>
+<li><strong>after()</strong> 方法在所选元素之前插入内容（可以添加HTML标签）</li>
+<li><strong>before()</strong> 方法在所选元素之后插入内容（可以添加HTML标签）</li>
 </ul>
 <p>例如：</p>
 <pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>before()<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span>
@@ -1055,7 +1055,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4k</span>&nbsp;字
+                class="white-color">4.2k</span>&nbsp;字
             
             
             
