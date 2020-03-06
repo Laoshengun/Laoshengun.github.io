@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>关于短路原则</title>
+      <link href="/2020/03/06/shortcircuitprinciple/"/>
+      <url>/2020/03/06/shortcircuitprinciple/</url>
+      
+        <content type="html"><![CDATA[<h2 id="短路原则介绍"><a href="#短路原则介绍" class="headerlink" title="短路原则介绍"></a>短路原则介绍</h2><p><strong>短路原则</strong>指的是 <strong>&amp;&amp;</strong> 运算和 <strong>||</strong> 运算的短路特性</p><p>假设A &amp;&amp; B</p><p>(只有 A 和 B 都为真，表达式才为真)</p><p>如果A为真，那么会继续判断B的真假</p><p>如果 A 为假，那么无论 B 的真假，整个表达式都为假，所以不会继续判断 B 的真假，如果 B 为计算式或函数式，那么将不会执行 B，这就是短路原则</p><p><strong>同理</strong></p><p>假设A || B</p><p>(只有 A 和 B 都为假，表达式才为假)</p><p>如果 A 为假，会继续执行B的判断</p><p>如果 A 为真，那么 B 的判断就无关紧要了，所以不会进行 B 的执行和判断</p><h2 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h2><p>举个例子</p><p>a = 1; b = 0; c = 3;</p><p>(a += c) || (b += c)</p><p>输出结果：a = 4, b = 0, c = 3</p><p>因为a为真，所以表达式一定为真，不再执行后面的判断</p><p>b &amp;&amp; (a += c)</p><p>输出结果：a = 1，b = 0，c = 3</p><p>因为b为假，所以表达式一定为假，不再执行后面的判断</p><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>我看到 Leetcode 上有这么一道题 <a href="https://leetcode-cn.com/problems/qiu-12n-lcof/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/qiu-12n-lcof/</a></p><p>题目：</p><p>求 <code>1+2+...+n</code> ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</p><p>解答：(以C语言为例)</p><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">sumNums</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>    n <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>n <span class="token operator">+</span><span class="token operator">=</span> <span class="token function">sumNums</span><span class="token punctuation">(</span>n<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> n<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre><p>这就用到了 &amp;&amp; 运算的短路原则</p><p>当 n 不为零时，n为真，则会执行 <code>(n += sumNums(n-1))</code> </p><p>当 n = 0 时，将不再执行后面的代码</p><p>（真奇妙，我自己肯定想不出来，淦）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux系统目录</title>
       <link href="/2020/03/06/linuxsystemcatalog/"/>
       <url>/2020/03/06/linuxsystemcatalog/</url>
