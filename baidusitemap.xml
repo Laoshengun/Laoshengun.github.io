@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://laoshengun.github.io/2020/03/07/linuxcommoncommands/</loc>
+    <lastmod>2020-03-08</lastmod>
+  </url>  <url>
+    <loc>https://laoshengun.github.io/2020/01/10/20200110/</loc>
+    <lastmod>2020-03-06</lastmod>
+  </url>  <url>
     <loc>https://laoshengun.github.io/2020/03/06/shortcircuitprinciple/</loc>
     <lastmod>2020-03-06</lastmod>
   </url>  <url>
@@ -27,9 +33,6 @@
   </url>  <url>
     <loc>https://laoshengun.github.io/2020/02/02/anki1/</loc>
     <lastmod>2020-03-03</lastmod>
-  </url>  <url>
-    <loc>https://laoshengun.github.io/2020/01/10/20200110/</loc>
-    <lastmod>2020-02-29</lastmod>
   </url>  <url>
     <loc>https://laoshengun.github.io/2020/01/21/leetcode2/</loc>
     <lastmod>2020-02-29</lastmod>

@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>Linux常用命令</title>
+      <link href="/2020/03/07/linuxcommoncommands/"/>
+      <url>/2020/03/07/linuxcommoncommands/</url>
+      
+        <content type="html"><![CDATA[<h1 id="目录操作的常用命令"><a href="#目录操作的常用命令" class="headerlink" title="目录操作的常用命令"></a>目录操作的常用命令</h1><h2 id="ls-命令"><a href="#ls-命令" class="headerlink" title="ls 命令"></a>ls 命令</h2><p>通过<strong>ls</strong>命令可以查看Linux文件夹中包含的文件及其文件权限(包括目录，文件夹，文件权限)，目录信息等等</p><p><code>ls [选项] [目录/文件]</code></p><p><strong>选项：</strong></p><ul><li><strong>-a：</strong>列出目录所有文件，包含以 <strong>.</strong> 开始的隐藏文件</li><li><strong>-A：</strong>列出除 <strong>.</strong> 及 <strong>..</strong> 的其他文件</li><li><strong>-r：</strong>反序排列</li><li><strong>-t：</strong>以文件修改时间排列</li><li><strong>-s：</strong>以文件大小排列</li><li><strong>-h：</strong>以易读大小显示</li><li><strong>-l：</strong>除了文件名之外，还将文件的权限，所有者，文件大小等信息详细列出来</li></ul><h2 id="cd-命令"><a href="#cd-命令" class="headerlink" title="cd 命令"></a>cd 命令</h2><p><strong>cd</strong> 命令用于实现目录跳转</p><p><code>cd [目录名]</code></p><p>进入根目录：<code>cd /</code></p><p>进入 “home” 目录：<code>cd ~</code></p><p>把上个命令的参数作为cd参数使用：<code>cd !$</code></p><p>进入上一次工作路径：<code>cd -</code></p><p>返回上一级目录：<code>cd ..</code></p><h2 id="pwd-命令"><a href="#pwd-命令" class="headerlink" title="pwd 命令"></a>pwd 命令</h2><p><strong>pwd</strong> 命令用于查看当前工作目录路径</p><p>查看当前路径：<code>pwd</code></p><p>查看当前目录的绝对路径<strong>（注意大写P）</strong>：<code>pwd -P</code></p><h2 id="mkdir-命令"><a href="#mkdir-命令" class="headerlink" title="mkdir 命令"></a>mkdir 命令</h2><p><strong>mkdir</strong> 命令用于创建文件夹</p><p><code>mkdir [选项] [参数]</code></p><p><strong>选项：</strong></p><ul><li><strong>-m：</strong>对新建目录设置存取权限，也可以用 chomd 命令设置</li><li><strong>-p：</strong>可以是一个路径名称。此时若路径中的某些目录尚不存在，加上此选项后，系统将自动建立号那些尚不存在的目录，即一次可以建立多个目录</li></ul><h2 id="rm-命令"><a href="#rm-命令" class="headerlink" title="rm 命令"></a>rm 命令</h2><p>删除一个目录中的一个或多个文件或目录</p><p>如果使用 <strong>rm</strong> 来删除文件，通常仍可以将文件恢复原状</p><p><code>rm [选项] [文件]</code></p><p><strong>选项：</strong></p><ul><li><strong>-d：</strong>删除可能仍有数据的目录（只限超级用户）</li><li><strong>-f：</strong>略过不存在的文件，不显示任何信息</li><li><strong>-r：</strong>同时删除该目录下的所有目录层</li><li><strong>-v：</strong>详细显示进行的步骤</li><li><strong>-i：</strong>进行任何删除操作前必须先确认，同时删除多个文件时每个文件都会提醒确认操作</li><li><strong>-l：</strong>同时删除多个文件（大于3个）时，只提醒一次</li></ul><h2 id="rmdir命令"><a href="#rmdir命令" class="headerlink" title="rmdir命令"></a>rmdir命令</h2><p>从一个目录中删除一个或多个子目录项，删除某目录时也必须具有对其父目录的写权限</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于短路原则</title>
       <link href="/2020/03/06/shortcircuitprinciple/"/>
       <url>/2020/03/06/shortcircuitprinciple/</url>
       
-        <content type="html"><![CDATA[<h2 id="短路原则介绍"><a href="#短路原则介绍" class="headerlink" title="短路原则介绍"></a>短路原则介绍</h2><p><strong>短路原则</strong>指的是 <strong>&amp;&amp;</strong> 运算和 <strong>||</strong> 运算的短路特性</p><p>假设A &amp;&amp; B</p><p>(只有 A 和 B 都为真，表达式才为真)</p><p>如果A为真，那么会继续判断B的真假</p><p>如果 A 为假，那么无论 B 的真假，整个表达式都为假，所以不会继续判断 B 的真假，如果 B 为计算式或函数式，那么将不会执行 B，这就是短路原则</p><p><strong>同理</strong></p><p>假设A || B</p><p>(只有 A 和 B 都为假，表达式才为假)</p><p>如果 A 为假，会继续执行B的判断</p><p>如果 A 为真，那么 B 的判断就无关紧要了，所以不会进行 B 的执行和判断</p><h2 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h2><p>举个例子</p><p>a = 1; b = 0; c = 3;</p><p>(a += c) || (b += c)</p><p>输出结果：a = 4, b = 0, c = 3</p><p>因为a为真，所以表达式一定为真，不再执行后面的判断</p><p>b &amp;&amp; (a += c)</p><p>输出结果：a = 1，b = 0，c = 3</p><p>因为b为假，所以表达式一定为假，不再执行后面的判断</p><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>我看到 Leetcode 上有这么一道题 <a href="https://leetcode-cn.com/problems/qiu-12n-lcof/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/qiu-12n-lcof/</a></p><p>题目：</p><p>求 <code>1+2+...+n</code> ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</p><p>解答：(以C语言为例)</p><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">sumNums</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>    n <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>n <span class="token operator">+</span><span class="token operator">=</span> <span class="token function">sumNums</span><span class="token punctuation">(</span>n<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> n<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre><p>这就用到了 &amp;&amp; 运算的短路原则</p><p>当 n 不为零时，n为真，则会执行 <code>(n += sumNums(n-1))</code> </p><p>当 n = 0 时，将不再执行后面的代码</p><p>（真奇妙，我自己肯定想不出来，淦）</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="短路原则介绍"><a href="#短路原则介绍" class="headerlink" title="短路原则介绍"></a>短路原则介绍</h2><p><strong>短路原则</strong>指的是 <strong>&amp;&amp;</strong> 运算和 <strong>||</strong> 运算的短路特性</p><p>假设A &amp;&amp; B</p><p>(只有 A 和 B 都为真，表达式才为真)</p><p>如果A为真，那么会继续判断B的真假</p><p>如果 A 为假，那么无论 B 的真假，整个表达式都为假，所以不会继续判断 B 的真假，如果 B 为计算式或函数式，那么将不会执行 B，这就是短路原则</p><p><strong>同理</strong></p><p>假设A || B</p><p>(只有 A 和 B 都为假，表达式才为假)</p><p>如果 A 为假，会继续执行B的判断</p><p>如果 A 为真，那么 B 的判断就无关紧要了，所以不会进行 B 的执行和判断</p><h2 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h2><p><strong>举个例子</strong></p><p>a = 1; b = 0; c = 3;</p><p>(a += c) || (b += c)</p><p>输出结果：a = 4, b = 0, c = 3</p><p>因为a为真，所以表达式一定为真，不再执行后面的判断</p><p>b &amp;&amp; (a += c)</p><p>输出结果：a = 1，b = 0，c = 3</p><p>因为b为假，所以表达式一定为假，不再执行后面的判断</p><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>我看到 Leetcode 上有这么一道题 <a href="https://leetcode-cn.com/problems/qiu-12n-lcof/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/qiu-12n-lcof/</a></p><p>题目：</p><p>求 <code>1+2+...+n</code> ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</p><p>解答：(以C语言为例)</p><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">sumNums</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>    n <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>n <span class="token operator">+</span><span class="token operator">=</span> <span class="token function">sumNums</span><span class="token punctuation">(</span>n<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> n<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre><p>这就用到了 &amp;&amp; 运算的短路原则</p><p>当 n 不为零时，n为真，则会执行 <code>(n += sumNums(n-1))</code> </p><p>当 n = 0 时，将不再执行后面的代码</p><p>（真奇妙，我自己肯定想不出来，淦）</p>]]></content>
       
       
       <categories>
@@ -295,7 +320,7 @@
       
         <tags>
             
-            <tag> bootstrap </tag>
+            <tag> Bootstrap </tag>
             
         </tags>
       

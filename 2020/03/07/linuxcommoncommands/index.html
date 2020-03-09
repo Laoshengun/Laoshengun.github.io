@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux系统目录, 噗噗熊">
-    <meta name="description" content="Linux系统目录介绍">
+    <meta name="keywords" content="Linux常用命令, 噗噗熊">
+    <meta name="description" content="Linux涉及目录，磁盘，文件，系统操作的常用命令">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Linux系统目录 | 噗噗熊</title>
+    <title>Linux常用命令 | 噗噗熊</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +303,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux系统目录</h1>
+                    <h1 class="description center-align post-title">Linux常用命令</h1>
                 </div>
             </div>
         </div>
@@ -450,28 +450,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-06
+                    2020-03-07
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-06
+                    2020-03-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    925
+                    563
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 				
@@ -487,37 +487,48 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Linux系统目录"><a href="#Linux系统目录" class="headerlink" title="Linux系统目录"></a>Linux系统目录</h2><ul>
-<li><strong>/bin：</strong>该目录存放着最经常使用的命令</li>
-<li><strong>/boot：</strong>存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件</li>
-<li><strong>/dev：</strong>该目录下存放的是Linux的外部设备，在Linux中访问设备的方式和访问文件的方式是相同的</li>
-<li><strong>/ect：</strong>该目录用来存放所有的系统管理所需要的配置文件和子目录</li>
-<li><strong>/home：</strong>用户的主目录，在Linux中，每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的</li>
-<li><strong>/lib：</strong>该目录存放着系统最基本的动态连接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要用到这些共享库</li>
-<li><strong>/lost+found：</strong>该目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件</li>
-<li><strong>/media：</strong>Linux系统会自动识别一些设备，例如U盘，光驱等等，当识别后，Linux会把识别的设备挂载到这个目录下</li>
-<li><strong>/mnt：</strong>系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将光驱挂载在/mnt/上，然后进入该目录就可以查看光驱里的内容了</li>
-<li><strong>/opt：</strong>这是给主机额外安装软件所摆放的目录。比如你安装一个ORACLE数据库则就可以放到这个目录下。默认是空的</li>
-<li><strong>/proc：</strong>这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息</li>
-<li><strong>/root：</strong>该目录为系统管理员，也称作超级权限者的用户主目录</li>
-<li><strong>/sbin：</strong>这里存放的是系统管理员使用的系统管理程序</li>
-<li><strong>/selinux：</strong>这个目录是Redhat/CentOS所持有的目录，Selinux是一个安全机制，类似于windows的防火墙，但是这套机制比较复杂，这个目录就是存放selinux相关的文件的</li>
-<li><strong>/srv：</strong>该目录存放一些服务启动之后需要提取的数据</li>
-<li><strong>/sys：</strong>该文件系统是内核设备树的一个直观反映。当一个内核对象被创建的时候，对应的文件和目录也在内核对象子系统中被创建</li>
-<li><strong>/tmp：</strong>这个目录是用来存放一些临时文件的</li>
-<li><strong>/usr (重要文件)：</strong>用户的很多应用程序和文件都放在这个目录下，类似于windows下的program files目录</li>
-<li><strong>/usr/bin：</strong>系统用户使用的应用程序</li>
-<li><strong>/usr/sbin：</strong>超级用户使用的比较高级的管理程序和系统守护程序</li>
-<li><strong>/usr/src：</strong>内核源代码默认的放置目录</li>
-<li><strong>/var：</strong>该目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件</li>
-<li><strong>/run：</strong>这是一个临时文件系统，存储系统启动以来的信息。当系统重启时，这个目录下的文件应该被删除或清除。如果系统上有 /var/run 目录，应该让它指向 run</li>
-</ul>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>下列几个目录属于重要目录，日常操作Linux系统，在没了解对应操作并做系统备份时避免删除或者随意更改内部文件</p>
+                <h1 id="目录操作的常用命令"><a href="#目录操作的常用命令" class="headerlink" title="目录操作的常用命令"></a>目录操作的常用命令</h1><h2 id="ls-命令"><a href="#ls-命令" class="headerlink" title="ls 命令"></a>ls 命令</h2><p>通过<strong>ls</strong>命令可以查看Linux文件夹中包含的文件及其文件权限(包括目录，文件夹，文件权限)，目录信息等等</p>
+<p><code>ls [选项] [目录/文件]</code></p>
+<p><strong>选项：</strong></p>
 <ul>
-<li><strong>/etc</strong>：系统中的配置文件，盲目更改可能会导致系统无法启动</li>
-<li><strong>/bin，/sbin，/usr/bin，/usr/sbin：</strong>系统预设的执行文件的放置目录</li>
-<li><strong>/var：</strong>大部分系统中运行的程序的日志文件都存储在该目录中</li>
+<li><strong>-a：</strong>列出目录所有文件，包含以 <strong>.</strong> 开始的隐藏文件</li>
+<li><strong>-A：</strong>列出除 <strong>.</strong> 及 <strong>..</strong> 的其他文件</li>
+<li><strong>-r：</strong>反序排列</li>
+<li><strong>-t：</strong>以文件修改时间排列</li>
+<li><strong>-s：</strong>以文件大小排列</li>
+<li><strong>-h：</strong>以易读大小显示</li>
+<li><strong>-l：</strong>除了文件名之外，还将文件的权限，所有者，文件大小等信息详细列出来</li>
 </ul>
+<h2 id="cd-命令"><a href="#cd-命令" class="headerlink" title="cd 命令"></a>cd 命令</h2><p><strong>cd</strong> 命令用于实现目录跳转</p>
+<p><code>cd [目录名]</code></p>
+<p>进入根目录：<code>cd /</code></p>
+<p>进入 “home” 目录：<code>cd ~</code></p>
+<p>把上个命令的参数作为cd参数使用：<code>cd !$</code></p>
+<p>进入上一次工作路径：<code>cd -</code></p>
+<p>返回上一级目录：<code>cd ..</code></p>
+<h2 id="pwd-命令"><a href="#pwd-命令" class="headerlink" title="pwd 命令"></a>pwd 命令</h2><p><strong>pwd</strong> 命令用于查看当前工作目录路径</p>
+<p>查看当前路径：<code>pwd</code></p>
+<p>查看当前目录的绝对路径<strong>（注意大写P）</strong>：<code>pwd -P</code></p>
+<h2 id="mkdir-命令"><a href="#mkdir-命令" class="headerlink" title="mkdir 命令"></a>mkdir 命令</h2><p><strong>mkdir</strong> 命令用于创建文件夹</p>
+<p><code>mkdir [选项] [参数]</code></p>
+<p><strong>选项：</strong></p>
+<ul>
+<li><strong>-m：</strong>对新建目录设置存取权限，也可以用 chomd 命令设置</li>
+<li><strong>-p：</strong>可以是一个路径名称。此时若路径中的某些目录尚不存在，加上此选项后，系统将自动建立号那些尚不存在的目录，即一次可以建立多个目录</li>
+</ul>
+<h2 id="rm-命令"><a href="#rm-命令" class="headerlink" title="rm 命令"></a>rm 命令</h2><p>删除一个目录中的一个或多个文件或目录</p>
+<p>如果使用 <strong>rm</strong> 来删除文件，通常仍可以将文件恢复原状</p>
+<p><code>rm [选项] [文件]</code></p>
+<p><strong>选项：</strong></p>
+<ul>
+<li><strong>-d：</strong>删除可能仍有数据的目录（只限超级用户）</li>
+<li><strong>-f：</strong>略过不存在的文件，不显示任何信息</li>
+<li><strong>-r：</strong>同时删除该目录下的所有目录层</li>
+<li><strong>-v：</strong>详细显示进行的步骤</li>
+<li><strong>-i：</strong>进行任何删除操作前必须先确认，同时删除多个文件时每个文件都会提醒确认操作</li>
+<li><strong>-l：</strong>同时删除多个文件（大于3个）时，只提醒一次</li>
+</ul>
+<h2 id="rmdir命令"><a href="#rmdir命令" class="headerlink" title="rmdir命令"></a>rmdir命令</h2><p>从一个目录中删除一个或多个子目录项，删除某目录时也必须具有对其父目录的写权限</p>
 
             </div>
             <hr/>
@@ -543,7 +554,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://laoshengun.github.io/2020/03/06/linuxsystemcatalog/">https://laoshengun.github.io/2020/03/06/linuxsystemcatalog/</a>
+                    <a href="https://laoshengun.github.io/2020/03/07/linuxcommoncommands/">https://laoshengun.github.io/2020/03/07/linuxcommoncommands/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -753,7 +764,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2020-03-06T15-32-59',
+        id: '2020-03-07T11-21-49',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -774,9 +785,60 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/03/07/linuxcommoncommands/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Linux常用命令">
+                        
+                        <span class="card-title">Linux常用命令</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Linux涉及目录，磁盘，文件，系统操作的常用命令
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/03/06/shortcircuitprinciple/">
                     <div class="card-image">
@@ -794,9 +856,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -814,55 +876,6 @@
                     
                     <a href="/tags/Leetcode/">
                         <span class="chip bg-color">Leetcode</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/04/jquerynotes6/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="jQuery笔记06(效果)">
-                        
-                        <span class="card-title">jQuery笔记06(效果)</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            对效果的设置
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-04
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/jQuery/">
-                        <span class="chip bg-color">jQuery</span>
                     </a>
                     
                 </div>
